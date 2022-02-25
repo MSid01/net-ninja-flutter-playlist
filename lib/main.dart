@@ -23,82 +23,59 @@ class MyApp extends StatelessWidget {
         ),
         backgroundColor: Colors.green[100],
         body: 
-        
-         Column(
-           children: [
-             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget> [
-                  const Text("Siddhesh Ankush Mungekar"),
-                  Container(
+        Column(
+          children: [
+            Row(
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.all(40.0),
+                  color: Colors.amber,
+                  child:const Text("Cell1"),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(40.0),
+                  color: Colors.redAccent,
+                  child:const Text("Cell2"),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(40.0),
+                  color: Colors.greenAccent,
+                  child:const Text("Cell3"),
+                ),
+                
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    padding: const EdgeInsets.all(40.0),
                     color: Colors.amber,
-                    child: const Icon(Icons.account_box),
-                    padding: const EdgeInsets.all(30),
+                    child:const Text("Cell4"),
                   ),
-                  ElevatedButton(
-                    onPressed: (){print("sidhesh");},
-                    child: const Text("Submit")
-                    )
-                ],
-              ),
-             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget> [
-                  const Text("Pratham subhash Mungekar"),
-                  Container(
-                    color: Colors.amber,
-                    child: const Icon(Icons.account_box),
-                    padding: const EdgeInsets.all(30),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                    padding: const EdgeInsets.all(40.0),
+                    color: Colors.redAccent,
+                    child:const Text("Cell5"),
                   ),
-                  ElevatedButton(
-                    onPressed: (){print("Prathamesh");},
-                    child: const Text("Submit")
-                    )
-                ],
-              ),
-
-
-           ],
-         ),
-          // child: IconButton(
-          //     onPressed: () => {print("Clicked")},
-          //     icon: const Icon(Icons.home)),
-          // child: ElevatedButton.icon(
-          //   onPressed: (){
-
-          // },
-          // icon:const  Icon(
-          //   Icons.home,
-          //   color: Colors.green,
-          //   size: 30.0,
-          // ), label:const Text("asdf"),
-          // ),
-          // child: TextButton(
-          //   onPressed: () {  },
-          //   child: const Text("Press me"),
-          // ),
-          //       child:  Icon(
-          //   Icons.audiotrack,
-          //   color: Colors.green,
-          //   size: 30.0,
-          // ),
-          //     child: Image.asset(
-          //   'images/background.jpg',
-          //   height: 400,
-          //   width: 400,
-          // )
-
-          // child: Text(
-          //   'Hello World',
-          //   style: TextStyle(
-          //       color: Color(0xffffffff),
-          //       fontWeight: FontWeight.bold,
-          //       fontSize: 50,
-          //       fontFamily: "Source Code Pro",
-          //       fontStyle: FontStyle.italic
-          //       ),
-          // ),
-
+                ),
+                Expanded(
+                  flex: 1,
+                  child: 
+                Container(
+                  padding: const EdgeInsets.all(40.0),
+                  color: Colors.greenAccent,
+                  child:const Text("Cell6"),
+                ),
+                )
+              ],
+            ),
+          ],
+        ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             // Add your onPressed code here!
