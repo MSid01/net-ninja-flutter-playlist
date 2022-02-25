@@ -3,11 +3,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const SidstersId());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class SidstersId extends StatefulWidget {
+  const SidstersId({Key? key}) : super(key: key);
+
+  @override
+  State<SidstersId> createState() => _SidstersId();
+}
+
+class _SidstersId extends State<SidstersId> {
+  int level = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,14 +24,23 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
               title: Text("Sidster's ID",
                   style: TextStyle(
-                    fontFamily: "Source Code Pro",
-                    color: Colors.pink[50],
-                    fontWeight: FontWeight.bold
-                  )),
+                      fontFamily: "Source Code Pro",
+                      color: Colors.pink[50],
+                      fontWeight: FontWeight.bold)),
               centerTitle: true,
               backgroundColor: Colors.grey[800],
             ),
             backgroundColor: Colors.grey[900],
+            floatingActionButton: FloatingActionButton(
+              onPressed: () => {setState((){level = level + 1;})},
+              backgroundColor: Colors.amber,
+              child:const Text("Click",
+              style: TextStyle(
+                color: Colors.black
+              ),
+              ),
+
+            ),
             body: Padding(
               padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
               child: Column(
@@ -36,9 +52,12 @@ class MyApp extends StatelessWidget {
                       radius: 50,
                     ),
                   ),
-                   Padding(
+                  Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Divider(height: 50.0, color: Colors.pink[50],),
+                    child: Divider(
+                      height: 50.0,
+                      color: Colors.pink[50],
+                    ),
                   ),
                   Text(
                     "NAME:",
@@ -84,34 +103,51 @@ class MyApp extends StatelessWidget {
                         letterSpacing: 2.0,
                         fontSize: 20.0),
                   ),
+                  const SizedBox(height: 28.0),
+                  Text(
+                    "LEVEL:",
+                    style:
+                        TextStyle(color: Colors.pink[100], letterSpacing: 2.0),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    '$level',
+                    style: const TextStyle(
+                        fontFamily: "Barriecito",
+                        color: Colors.white,
+                        letterSpacing: 2.0,
+                        fontSize: 20.0),
+                  ),
                   const SizedBox(height: 20),
                   Row(
-                    children:  [
+                    children: [
                       Icon(
                         Icons.mail,
                         color: Colors.red[50],
                       ),
-                      const SizedBox(width:5.0),
-                      const Text("samungekar2000@gmail.coom",
-                      style: TextStyle(
-                        fontFamily: "IndieFlower-Regular",
-                        color: Colors.white
-                      ),)
+                      const SizedBox(width: 5.0),
+                      const Text(
+                        "samungekar2000@gmail.coom",
+                        style: TextStyle(
+                            fontFamily: "IndieFlower-Regular",
+                            color: Colors.white),
+                      )
                     ],
                   ),
                   const SizedBox(height: 10),
                   Row(
-                    children:  [
+                    children: [
                       Icon(
                         Icons.music_note,
                         color: Colors.red[50],
                       ),
-                      const SizedBox(width:5.0),
-                      const Text("Wafa ne bewafai...",
-                      style: TextStyle(
-                        fontFamily: "IndieFlower-Regular",
-                        color: Colors.white
-                      ),)
+                      const SizedBox(width: 5.0),
+                      const Text(
+                        "Wafa ne bewafai...",
+                        style: TextStyle(
+                            fontFamily: "IndieFlower-Regular",
+                            color: Colors.white),
+                      )
                     ],
                   )
                 ],
