@@ -11,78 +11,111 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
-      // scaffold is a class and provides properties like appbar, floatingActionButton, body
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter',
-              style: TextStyle(
-                color: Colors.green.shade50,
-              )),
-          centerTitle: true,
-        ),
-        backgroundColor: Colors.green[100],
-        body: 
-        Column(
-          children: [
-            Row(
-              children: <Widget>[
-                Container(
-                  padding: const EdgeInsets.all(40.0),
-                  color: Colors.amber,
-                  child:const Text("Cell1"),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(40.0),
-                  color: Colors.redAccent,
-                  child:const Text("Cell2"),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(40.0),
-                  color: Colors.greenAccent,
-                  child:const Text("Cell3"),
-                ),
-                
-              ],
+        title: 'Welcome to Flutter',
+        // scaffold is a class and provides properties like appbar, floatingActionButton, body
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text("Sidster's ID",
+                  style: TextStyle(
+                    fontFamily: "Source Code Pro",
+                    color: Colors.pink[50],
+                    fontWeight: FontWeight.bold
+                  )),
+              centerTitle: true,
+              backgroundColor: Colors.grey[800],
             ),
-            Row(
-              children: <Widget>[
-                Expanded(
-                  flex: 1,
-                  child: Container(
-                    padding: const EdgeInsets.all(40.0),
-                    color: Colors.amber,
-                    child:const Text("Cell4"),
+            backgroundColor: Colors.grey[900],
+            body: Padding(
+              padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Center(
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage("images/avatar.jpg"),
+                      radius: 50,
+                    ),
                   ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Container(
-                    padding: const EdgeInsets.all(40.0),
-                    color: Colors.redAccent,
-                    child:const Text("Cell5"),
+                   Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Divider(height: 50.0, color: Colors.pink[50],),
                   ),
-                ),
-                Expanded(
-                  flex: 1,
-                  child: 
-                Container(
-                  padding: const EdgeInsets.all(40.0),
-                  color: Colors.greenAccent,
-                  child:const Text("Cell6"),
-                ),
-                )
-              ],
-            ),
-          ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            // Add your onPressed code here!
-          },
-          child: const Text("Click"),
-        ),
-      ),
-    );
+                  Text(
+                    "NAME:",
+                    style:
+                        TextStyle(color: Colors.pink[100], letterSpacing: 2.0),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    "Sidster",
+                    style: TextStyle(
+                        fontFamily: "Barriecito",
+                        color: Colors.white,
+                        letterSpacing: 2.0,
+                        fontSize: 25.0),
+                  ),
+                  const SizedBox(height: 28.0),
+                  Text(
+                    "LANGUAGES:",
+                    style:
+                        TextStyle(color: Colors.pink[100], letterSpacing: 2.0),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    "C, Java, JavaScript, Python, HTML, SQL",
+                    style: TextStyle(
+                        fontFamily: "Barriecito",
+                        color: Colors.green[500],
+                        letterSpacing: 2.0,
+                        fontSize: 20.0),
+                  ),
+                  const SizedBox(height: 28.0),
+                  Text(
+                    "BRANCH:",
+                    style:
+                        TextStyle(color: Colors.pink[100], letterSpacing: 2.0),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    "IT",
+                    style: TextStyle(
+                        fontFamily: "Barriecito",
+                        color: Colors.white,
+                        letterSpacing: 2.0,
+                        fontSize: 20.0),
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    children:  [
+                      Icon(
+                        Icons.mail,
+                        color: Colors.red[50],
+                      ),
+                      const SizedBox(width:5.0),
+                      const Text("samungekar2000@gmail.coom",
+                      style: TextStyle(
+                        fontFamily: "IndieFlower-Regular",
+                        color: Colors.white
+                      ),)
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    children:  [
+                      Icon(
+                        Icons.music_note,
+                        color: Colors.red[50],
+                      ),
+                      const SizedBox(width:5.0),
+                      const Text("Wafa ne bewafai...",
+                      style: TextStyle(
+                        fontFamily: "IndieFlower-Regular",
+                        color: Colors.white
+                      ),)
+                    ],
+                  )
+                ],
+              ),
+            )));
   }
 }
